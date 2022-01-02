@@ -2,9 +2,9 @@ var app = new Vue({
   el: '#game-view',
 
   data: {
-    input_length: 2,
-    side_length: 2,
-    active_game: new Game(2),
+    input_length: 4,
+    side_length: 4,
+    active_game: new Game(4),
   },
 
   computed: {
