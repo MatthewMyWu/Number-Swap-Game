@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: rgba(196, 186, 131, 0.616);
+  font-size: 1.5rem;
+}
+
+#game-view #prompt {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  padding: 10px;
+  background-color: #dfcd69;
+  border: #298329 solid 3px;
+}
+
+#game-view #prompt button {
+  font-size: 1.5rem;
+}
+
+#game-view #prompt input {
+  width: 60px;
+  height: 40px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+#game-view #board {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  margin: 50px;
+}
+
+#game-view #board table .game-tile {
+  height: 50px;
+  width: 50px;
+  font-size: 2rem;
+  text-align: center;
+  border: 2px green solid;
+  background-color: #d6d875;
+  padding: 10px;
+  cursor: pointer;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+#game-view #board table .game-tile:hover {
+  background-color: #d8da63;
+}
+
+#game-view #board table .free-tile {
+  background-color: #d3ad5c !important;
+  font-size: 0;
+}
+/*# sourceMappingURL=app.css.map */

@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+}
+
+body {
+    background-color: rgba(196, 186, 131, 0.616);
+    font-size: 1.5rem;
+}
+
+// BOARD
+
+$tile-size: 50px;
+$side-length: 4;
+
+#game-view {
+    #prompt {
+        display: flex;
+        justify-items: center;
+        justify-content: space-around;
+        align-content: center;
+        align-items: center;
+        padding: 10px;
+        background-color: rgb(223, 205, 105);
+        border: rgb(41, 131, 41) solid 3px;
+
+        button {
+            font-size: 1.5rem;
+        }
+
+        input {
+            width: 60px;
+            height: 40px;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    #board {
+        display: flex;
+        position: relative;
+        justify-content: center;
+        margin: 50px;
+
+        table {
+            .game-tile {
+                height: $tile-size;
+                width: $tile-size;
+                font-size: 2rem;
+                text-align: center;
+                border: 2px green solid;
+                background-color: rgb(214, 216, 117);
+                padding: 10px;
+
+                cursor: pointer;
+                user-select: none;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+
+                &:hover {
+                    background-color: rgb(216, 218, 99);
+                }
+            }
+
+            .free-tile {
+                background-color: rgb(211, 173, 92) !important;
+                font-size: 0;
+            }
+        }
+    }
+}

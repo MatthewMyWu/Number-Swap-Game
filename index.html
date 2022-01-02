@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="app.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="index.js" defer></script>
+
+    <script src="Tile.js"></script>
+    <script src="Game.js"></script>
+    <title>Number Swap Game</title>
+</head>
+
+<body>
+    <div id="game-view">
+        <div id="prompt">
+            <div>
+                <label for="length">Side length</label>
+                <input type="number" name="length" id="length" placeholder="2" v-model="input_length">
+            </div>
+
+            <div>
+                <button v-on:click="new_board()">
+                    New Board
+                </button>
+            </div>
+        </div>
+
+        <div id="board">
+            <table>
+                <tr v-for="(tile, i) of active_game.board" v-if="i % side_length == 0">
+                    <td v-for="(tile, j) of active_game.board" v-if="should_display_tile(i, j)"
+                        v-on:click="active_game.swap(j)" class="game-tile" v-bind:class="is_free_tile(tile)">
+                        {{tile.value}}
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>
